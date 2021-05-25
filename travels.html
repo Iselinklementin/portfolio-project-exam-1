@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Look at all of our travels, and discover new places to visit" />
+    <meta name="keywords"
+        content="travel, blog, asia, europe, america, oceania, adventure, exotic, wildlife, culture, explore" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/travels.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b8ac118a8.js" crossorigin="anonymous"></script>
+
+    <title>Our travels</title>
+</head>
+
+<body>
+
+    <!-- Loadingscreen -->
+    
+    <div class="loader" id="load">
+        <p class="loading-text">9 stories coming right up!</p>
+        <div class="airplane-holder">
+            <i class="fas fa-plane airplane" id="airplane-center"></i>
+        </div>
+        <div class="loading-pulse-wrapper">
+            <div class="pulse"></div>
+        </div>
+    </div>
+
+    <header>
+        <ul class="skip-links">
+            <li><a href="#main">Skip to the main content</a></li>
+        </ul>
+        <nav>
+            <ul>
+                <li><a href="/index.html"><img src="" class="logo desktop-logo" alt="Explore-logo"></a></li>
+                <li><a class="nav-el" href="/about.html">About</a></li>
+                <li><a class="nav-el active-site" href="/travels.html" aria-current="page">Travels</a></li>
+                <li><a class="nav-el" href="/contact.html">Contact</a></li>
+                <li class="list-search"><i class="fas fa-search search-icon"></i></li>
+            </ul>
+
+            <!-- Search -->
+
+            <div class="searching">
+                <form class="search-wrap" role="search">
+                    <div class="search-container">
+                        <input type="search" id="search" name="search" placeholder="Search destinations"
+                            aria-label="Type your search and press enter." autocomplete="off">
+                        <button class="search-btn go-search" type="button" disabled><i
+                                class="fas fa-search"></i></button>
+                        <ul class="search-dropdown">
+                        </ul>
+                    </div>
+                </form>
+            </div>
+
+        </nav>
+    </header>
+    <main id="main">
+        <section class="intro">
+            <h1>Look at all of our travels, and discover new places to visit. These are all of our stories
+                from <span>Explore</span>.</h1>
+        </section>
+        <!-- Tags -->
+        <section class="tags-header">
+            <ul class="ul-list">
+                <li class="tag desktop-tag ocean-tag all-tag">All</li>
+                <li class="tag desktop-tag sand-tag filter-sand-tag">Animals</li>
+                <li class="tag desktop-tag peach-tag filter-peach-tag">Oceania</li>
+                <li class="tag desktop-tag blue-tag filter-blue-tag">Beliefs</li>
+                <li class="tag desktop-tag purple-tag filter-purple-tag">Adventure</li>
+                <li class="tag desktop-tag blue-tag filter-blue-tag">Europe</li>
+                <li class="tag desktop-tag green-tag filter-green-tag">Africa</li>
+                <li class="tag desktop-tag purple-tag filter-purple-tag">Landscapes</li>
+                <li class="tag desktop-tag sand-tag filter-sand-tag">Culture</li>
+                <li class="tag desktop-tag purple-tag filter-purple-tag">Asia</li>
+                <li class="tag desktop-tag green-tag filter-green-tag">Nature</li>
+                <li class="tag desktop-tag peach-tag filter-peach-tag">Traditions</li>
+                <li class="tag desktop-tag sand-tag filter-sand-tag">America</li>
+            </ul>
+        </section>
+
+        <!-- Filter results -->
+
+        <section class="post-container filter-wrap">
+        </section>
+
+        <div id="container">
+
+            <!-- Desktop posts -->
+
+            <div class="desktop-head-posts">
+                <div class="dekstop-top-posts">
+                </div>
+
+                <div class="wrap-four-posts">
+                </div>
+
+                <div class="desktop-bottom-posts">
+                </div>
+
+            </div>
+
+            <!-- Mobile posts -->
+
+            <div class="mobile-posts">
+                <article class="head-post">
+                </article>
+
+                <section class="wrap-two-posts">
+                </section>
+
+                <section class="posts-standard post-container">
+                </section>
+
+
+                <section class="wrap-two-posts-middle">
+                </section>
+
+                <section class="wrap-two-posts-hidden">
+                </section>
+
+                <section class="posts-standard-hidden post-container">
+                </section>
+            </div>
+
+        </div>
+
+        <button class="viewBtn">View more..</button>
+
+        <!-- Sosial Media -->
+
+        <section class="some">
+            <a href="#"><img src="/images/icons/facebook.svg" alt="Facebook-logo">Like</a>
+            <a href="#"><img src="/images/icons/instagram.svg" alt="Instagram-logo">Follow</a>
+            <a href="#"><img id="twitter" src="/images/icons/twitter.svg" alt="Twitter-logo">Follow</a>
+            <a href="#"><img id="youtube" src="/images/icons/youtube.svg" alt="YouTube-logo">Subscribe</a>
+        </section>
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href="/index.html"><img src="/images/icons/logofeet_white.svg" class="logo-footer"
+                        alt="Explore-logo"></a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/travels.html">Travels</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </footer>
+    <script src="/js/components.js"></script>
+    <script src="/js/travels.js"></script>
+</body>
+
+</html>
