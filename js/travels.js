@@ -513,7 +513,6 @@ function toggleShowMore() {
     showMoreSplit.classList.toggle("show");
     showMorestandardPosts.classList.toggle("show");
     desktopBottomPosts.classList.toggle("show");
-    console.log(desktopBottomPosts)
 
     if (btnView.innerHTML === "View more..") {
         btnView.innerHTML = "View less.."

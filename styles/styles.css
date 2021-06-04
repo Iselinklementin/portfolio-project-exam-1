@@ -46,7 +46,7 @@ body {
 }
 
 
-/* TRYING TO MAKE LOADINGBAR */
+/* LOADINGBAR */
 
 .loader {
     width: 100vw;
@@ -204,7 +204,7 @@ nav ul {
     transform: translateY(1rem);
 }
 
-/* TESTING SEARCHBAR */
+/* SEARCHBAR */
 
 .searching {
     display: none;
