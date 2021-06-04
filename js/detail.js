@@ -51,8 +51,8 @@ function createIntro(place, tag, media) {
     })
 
     /**
-    * Ingress
-    */
+     * Ingress
+     */
 
     const para = document.querySelector(".ingress-text");
     const map = document.querySelector(".map-img");
@@ -121,8 +121,8 @@ function createIntro(place, tag, media) {
 };
 
 /*
-* Open / Close modal
-*/
+ * Open / Close modal
+ */
 
 const modal = document.querySelector(".modal");
 const openModal = document.querySelectorAll("#open-modal");
@@ -154,12 +154,12 @@ window.onclick = function (event) {
 };
 
 /**
-* TAGS:
-* Filter tags & give them styling/classes:
-* Get id from blogpost-API
-* Compare id on posts to tags-id (from tagResponse)
-* Show name of the id in list & give style
-*/
+ * TAGS:
+ * Filter tags & give them styling/classes:
+ * Get id from blogpost-API
+ * Compare id on posts to tags-id (from tagResponse)
+ * Show name of the id in list & give style
+ */
 
 function tagsStyle(place, tag) {
     place.tags.filter(t => {
@@ -204,3 +204,108 @@ window.onload = () => {
         main.style.display = "block";
     }, 2000)
 };
+
+// Comments
+
+const form = document.querySelector(".form");
+const postID = document.querySelector("#postId");
+const nameInput = document.querySelector("#name");
+const comment = document.querySelector("#comment");
+const email = document.querySelector("#email");
+const commentBtn = document.querySelector(".comment-btn");
+const successComment = document.querySelector(".comment-success");
+
+const ACTION_URL = "https://grafs.no/wp-json/wp/v2/comments?post="
+
+form.onsubmit = (e) => {
+    e.preventDefault();
+    
+    postID.value = `${id}`
+
+    const data = JSON.stringify({
+        post: postID.value,
+        author_name: nameInput.value,
+        author_email: email.value,
+        content: comment.value,
+    });
+
+    fetch(ACTION_URL, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: data,
+    })
+
+    .then((response) => {
+        if(response.ok) {
+            form.reset()
+            commentBtn.disabled = true;
+            successComment.style.display = "block";
+            // console.log("Submitted")
+            // console.log(response)
+        }
+        return response.json();
+    })
+    .then((object) => {
+        object.message
+    })
+    .catch(error => console.error("Error:", error))
+};
+
+function validateEmail(email) {
+    const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const patternMatches = regEx.test(email);
+    return patternMatches;
+};
+
+function checkLength(value, len) {
+    if (value.trim().length > len) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+const commentIcon = document.querySelector(".comment-icon");
+const nameIcon = document.querySelector(".name-icon");
+const emailIcon = document.querySelector(".email-icon");
+
+comment.addEventListener("blur", () => {
+    if(checkLength(comment.value, 1)) {
+        commentIcon.classList.remove("fa-exclamation-triangle")
+    } else {
+        commentIcon.classList.add("fa-exclamation-triangle");
+    }
+});
+
+nameInput.addEventListener("blur", () => {
+    if(checkLength(nameInput.value, 1)) {
+        nameIcon.classList.remove("fa-exclamation-triangle")
+    } else {
+        nameIcon.classList.add("fa-exclamation-triangle");
+    }
+});
+
+email.addEventListener("blur", () => {
+    if(validateEmail(email.value)) {
+        emailIcon.classList.remove("fa-exclamation-triangle")
+    } else {
+        emailIcon.classList.add("fa-exclamation-triangle");
+    }    
+});
+
+form.addEventListener("keyup", function () {
+    if (checkLength(nameInput.value, 1) && validateEmail(email.value) && checkLength(comment.value, 1)) {
+        commentBtn.disabled = false;
+    } else {
+        commentBtn.disabled = true;
+    }
+});
+
+
+
+// commentBtn.addEventListener("click", validate)
+// comment.addEventListener("keyup", validate)
+// nameInput.addEventListener("keyup", validate)
+// email.addEventListener("keyup", validate)

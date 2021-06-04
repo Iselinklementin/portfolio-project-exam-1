@@ -176,6 +176,47 @@
             <a role="button" class="button" href="/travels.html">Explore</a>
         </section>
 
+
+        <!-- Comments -->
+        <div class="comment-head-wrap">
+            <h3 class="comment-head">Write a comment</h3>
+            <p>Your email address will not be published.</p>
+            <p>Required fields are marked *</p>
+        </div>
+
+        <form class="form">
+            <input type="hidden" id="postId">
+            <div>
+                <div class="comment-wrap">
+                    <label for="comment" class="label">Comment *</label>
+                    <i class="comment-icon fas"></i>
+                </div>
+                <textarea type="text" id="comment" class="message form-input"></textarea>
+            </div>
+
+            <div>
+                <div class="comment-wrap">
+                    <label for="name" class="label">Name *</label>
+                    <i class="name-icon fas"></i>
+                </div>
+                <input type="text" id="name" class="form-input">
+            </div>
+
+            <div>
+                <div class="comment-wrap">
+                    <label for="email" class="label">Email *</label>
+                    <i class="email-icon fas"></i>
+                </div>
+                <input type="email" id="email" class="form-input">
+            </div>
+            <button type="submit" class="button comment-btn" disabled>Post comment</button>
+        </form>
+
+        <div class="comment-success">
+            <h3 class="comment-head">Thank you!</h3>
+            <p>Your comment has been sent for review, and will be posted when approved.</p>
+        </div>
+
         <!-- Sosial media -->
 
         <section class="some">
@@ -190,7 +231,7 @@
         <div class="modal">
             <span class="close">&times;</span>
             <div class="modal-content">
-               
+
                 <img class="modal-content img-modal">
                 <p class="caption"></p>
             </div>
