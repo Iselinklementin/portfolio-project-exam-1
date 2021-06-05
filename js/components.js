@@ -40,11 +40,11 @@ window.addEventListener("scroll", handleScroll);
 
 function setWidthDesktop() {
     if (document.body.clientWidth > 681) {
-        logo.src = "/images/icons/logofeet_full.svg";
+        logo.src = "images/icons/logofeet_full.svg";
 
         let child = navUl.children[2];
         if (child.classList.contains("current")) {
-            logo.src = "/images/icons/logofeet_full_white.svg";
+            logo.src = "images/icons/logofeet_full_white.svg";
         }
         logo.classList.add("desktop-logo");
     }
@@ -52,12 +52,12 @@ function setWidthDesktop() {
 
 function setWidthMobile() {
     if (document.body.clientWidth < 680) {
-        logo.src = "/images/icons/logofeet.svg";
+        logo.src = "images/icons/logofeet.svg";
 
         let child = navUl.children[2];
 
         if (child.classList.contains("current")) {
-            logo.src = "/images/icons/logofeet_white.svg";
+            logo.src = "images/icons/logofeet_white.svg";
         }
 
         logo.classList.remove("desktop-logo");
@@ -292,7 +292,7 @@ function displayError() {
     const main = document.querySelector("main");
     main.innerHTML = `<div class="error-message">
                     <figure class="lost-site">
-                        <img class="lost" src="/images/airplane-lost.jpg" alt="Airplane illustration - getting lost">
+                        <img class="lost" src="images/airplane-lost.jpg" alt="Airplane illustration - getting lost">
                     </figure>
                     <p class="sorry">So sorry!</p>
                     <p>Looks like we got lost!</p>

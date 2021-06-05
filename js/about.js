@@ -43,10 +43,10 @@ window.onload = () => {
         const sofie = document.querySelector(".sofie");
         const johan = document.querySelector(".johan");
 
-        sofie.innerHTML = `<img src="/images/blog-girl.jpg"
+        sofie.innerHTML = `<img src="images/blog-girl.jpg"
                         alt="Picture of Sofie Lofiensen. She got long, blond hair and a camera in her hands.">`
 
-        johan.innerHTML = `<img src="/images/blog-guy.jpg"
+        johan.innerHTML = `<img src="images/blog-guy.jpg"
                         alt="Picture of Johan Lofiensen. He got dark, short hair and are standing in a field.">`
 
         if (count === 1) {

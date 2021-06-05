@@ -20,7 +20,7 @@ function getApi() {
 
             latest.innerHTML = `<div class="error-message">
                                 <figure class="lost-site">
-                                    <img class="lost" src="/images/airplane-lost.jpg" alt="Airplane illustration - getting lost">
+                                    <img class="lost" src="images/airplane-lost.jpg" alt="Airplane illustration - getting lost">
                                 </figure>
                                 <p class="sorry">So sorry!</p>
                                 <p>Looks like we got lost!</p>
