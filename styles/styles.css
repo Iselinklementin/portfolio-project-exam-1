@@ -683,7 +683,7 @@ article,
 
 /* MODAL */
 
-#open-modal:hover {
+.open-modal:hover {
     cursor: zoom-in;
 }
 
