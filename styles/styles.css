@@ -691,7 +691,7 @@ article,
     display: none;
     position: fixed;
     z-index: 15;
-    padding-top: 100px;
+    padding-top: 140px;
     left: 0;
     top: 0;
     width: 100%;
@@ -740,7 +740,7 @@ article,
 .close {
     position: absolute;
     right: 6%;
-    top: 8%;
+    top: 15%;
     color: #f1f1f1;
     font-size: 35px;
     transition: 0.3s;
@@ -822,5 +822,9 @@ footer ul a:hover {
 
     #airplane-center {
         top: 80%;
+    }
+
+    .close {
+        right: 25%;
     }
 }

@@ -3,7 +3,7 @@
 */
 
 const modal = document.querySelector(".modal");
-const openModal = document.querySelectorAll("#open-modal");
+const openModal = document.querySelectorAll(".open-modal");
 const closeModal = document.querySelector(".close");
 const imgModal = document.querySelector(".img-modal");
 

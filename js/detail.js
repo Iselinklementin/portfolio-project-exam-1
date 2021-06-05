@@ -125,7 +125,7 @@ function createIntro(place, tag, media) {
  */
 
 const modal = document.querySelector(".modal");
-const openModal = document.querySelectorAll("#open-modal");
+const openModal = document.querySelectorAll(".open-modal");
 const closeModal = document.querySelector(".close");
 const imgModal = document.querySelector(".img-modal");
 const modalCaption = document.querySelector(".caption");
@@ -205,7 +205,7 @@ window.onload = () => {
     }, 2000)
 };
 
-// Comments
+// ADD COMMENTS
 
 const form = document.querySelector(".form");
 const postID = document.querySelector("#postId");
@@ -242,8 +242,6 @@ form.onsubmit = (e) => {
             form.reset()
             commentBtn.disabled = true;
             successComment.style.display = "block";
-            // console.log("Submitted")
-            // console.log(response)
         }
         return response.json();
     })
@@ -302,10 +300,3 @@ form.addEventListener("keyup", function () {
         commentBtn.disabled = true;
     }
 });
-
-
-
-// commentBtn.addEventListener("click", validate)
-// comment.addEventListener("keyup", validate)
-// nameInput.addEventListener("keyup", validate)
-// email.addEventListener("keyup", validate)
