@@ -63,7 +63,7 @@ const time = document.querySelector("#time");
 const trip = document.querySelector(".trip");
 const line = document.querySelector(".first-line");
 
-const deadline = 'August 1 2021';
+const deadline = 'August 1 2022';
 
 const timeinterval = setInterval(() => {
     const total = Date.parse(deadline) - Date.parse(new Date());
