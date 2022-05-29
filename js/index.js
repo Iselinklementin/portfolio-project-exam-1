@@ -109,8 +109,6 @@ function latestPosts(urlResponse, media) {
   // ${sourceUrl[4].text}
   // ${sourceUrl[11].text}
 
-  console.log(galleryPosts);
-
   sliderOne.innerHTML += `<img src="${galleryPosts[2].acf.heading_img.url}" alt="Vietnam sunset, people working" class="slider-img">
                             <p class="gallery-text">${galleryPosts[2].acf.sub_heading}</p>`;
   sliderOne.href = `detail.html?id=${galleryPosts[2].id}`;
